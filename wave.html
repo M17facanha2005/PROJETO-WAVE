@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Wave | Tráfego Pago e Automações</title>
+    <style>
+        :root {
+            --roxo: #6A35FF;
+            --azul: #1E90FF;
+            --gradiente: linear-gradient(45deg, var(--roxo), var(--azul));
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            background: var(--gradiente);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background: var(--gradiente);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 5%;
+            background: url('wave-bg.jpg') no-repeat center/cover;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 5%;
+        }
+        .service-card {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 5%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">WAVE</div>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <button class="cta-button">FALE JÁ COM A GENTE!</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>SOMOS A AGÊNCIA QUE VAI ALÉM DAS CURTIDAS.</h1>
+        <p>O momento de fazer seu negócio decolar é AGORA.</p>
+        <button class="cta-button">QUERO VENDER MAIS!</button>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="services">
+        <div class="service-card">
+            <h3>Tráfego Pago Estratégico</h3>
+            <p>Anúncios que convertem no Meta, Google e TikTok.</p>
+        </div>
+        <div class="service-card">
+            <h3>Criação de Sites Profissionais</h3>
+            <p>Design otimizado para vendas e SEO.</p>
+        </div>
+        <div class="service-card">
+            <h3>Social Media com Resultados</h3>
+            <p>Gestão criativa que engaja e vende.</p>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section style="text-align: center; padding: 50px 5%;">
+        <h2>Não perca tempo! Sua concorrência já está escalando com a WAVE.</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>✔️ Relatórios transparentes</li>
+            <li>✔️ Automações que reduzem custos</li>
+            <li>✔️ Equipe especializada em e-commerce</li>
+        </ul>
+    </section>
+
+    <!-- Contato -->
+    <footer id="contato">
+        <h2>Vamos escalar seu negócio juntos?</h2>
+        <p>Atendimento personalizado e resultados mensuráveis.</p>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="tel" placeholder="Telefone" required>
+            <button type="submit" class="cta-button">QUERO COMEÇAR AGORA!</button>
+        </form>
+        <p>Ou nos chame no WhatsApp: <a href="https://wa.me/5585994358301">(85) 99435-8301</a></p>
+        <p>Siga-nos: <a href="https://instagram.com/agencia_wave1">@agencia_wave1</a></p>
+    </footer>
+
+    <script>
+        // Botão do WhatsApp
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            window.open('https://wa.me/5585994358301', '_blank');
+        });
+    </script>
+</body>
+</html>

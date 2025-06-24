@@ -258,79 +258,92 @@ const SHeader = styled.header`
   height: 100vh;
   width: 100vw;
   background: radial-gradient(circle, #474049, #0f0f0f);
-
   display: grid;
   place-items: center;
-
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif; /* Fallback adicionado */
   color: white;
   position: relative;
+  overflow: visible; /* Garante que nada seja cortado */
+
   & div {
     overflow: visible;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
     @media (max-width: 768px) {
       scale: 0.8;
     }
+
     & p {
       animation: ${animations.fadeIn} 2s ease;
-      font-family: "JetBrains Mono";
+      font-family: "JetBrains Mono", monospace; /* Fallback adicionado */
       font-size: 17px;
+      line-height: 1.5; /* Melhora a legibilidade */
+      
       & a {
         font-size: 17px;
         opacity: 0.7;
         font-weight: 500;
       }
+      
       & span {
         font-size: 19px;
         opacity: 1;
         font-weight: 700;
       }
     }
+
     & h1 {
-      line-height: 1;
+      line-height: 1.2; /* Ajuste para acentos */
       text-transform: uppercase;
       font-weight: 800;
       font-size: 100px;
-      overflow: hidden;
+      overflow: visible; /* Impede corte de caracteres */
       animation: ${animations.showText} 1s ease;
+      font-feature-settings: "kern" 1; /* Melhora kerning */
+      text-rendering: optimizeLegibility; /* Melhora renderização */
     }
+
     & footer {
       display: flex;
       gap: 70px;
       overflow: visible;
+      
       & #row {
         width: 180px;
         display: flex;
         align-items: center;
         gap: 40px;
         overflow: visible;
+        
         & svg {
           animation: ${animations.showIcon} 1s ease;
           cursor: pointer;
           color: rgba(72, 99, 255, 0.62);
+          
           &:hover {
             opacity: 0.8;
             scale: 1.1;
           }
         }
       }
-    & small {
-  max-width: 500px;
-  font-size: 14px;
-  font-family: "JetBrains Mono";
-  opacity: 0.9;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  display: block;
-  height: auto;
-  line-height: 1.4;
-}
+    }
 
+    & small {
+      max-width: 500px;
+      font-size: 14px;
+      font-family: "JetBrains Mono", monospace;
+      opacity: 0.9;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      display: block;
+      height: auto;
+      line-height: 1.6; /* Melhor para leitura */
     }
   }
+
   & #scroll {
     @media (max-width: 768px) {
       scale: 1.2;
@@ -340,13 +353,16 @@ const SHeader = styled.header`
     left: 60px;
     display: flex;
     align-items: center;
-    font-family: "Outfit";
+    font-family: "Outfit", sans-serif; /* Fallback adicionado */
     flex-direction: row;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
+    line-height: 1.3; /* Previne corte */
   }
 `;
+
+
 
 const SAboutMe = styled.section`
   height: 670px;
